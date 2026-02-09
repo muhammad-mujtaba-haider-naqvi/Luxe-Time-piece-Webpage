@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luxe Timepieces | Premium Watches</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header', { isAdmin: isAdmin }) %>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Our Collection</h1>
+      <p>Discover exceptional timepieces crafted with precision and elegance</p>
+    </div>
+    <div class="products-grid">
+      <% products.forEach(function(p){ %>
+        <div class="product-card" id="product-<%= p.id %>">
+          <a href="/product/<%= p.id %>" class="image-wrapper">
+            <img src="/<%= p.primaryImage %>" alt="<%= p.title %>">
+            <div class="hover-overlay">
+              <div class="hover-content">
+                <span class="hover-price">$<%= p.price.toFixed(2) %></span>
+                <p class="hover-desc"><%= p.description %></p>
+                <span class="hover-cta">View Details →</span>
+              </div>
+            </div>
+          </a>
+          <div class="product-info">
+            <a class="product-title" href="/product/<%= p.id %>"><%= p.title %></a>
+            <div class="product-price">$<%= p.price.toFixed(2) %></div>
+          </div>
+          <% if (isAdmin) { %>
+            <div class="admin-actions">
+              <a href="/admin/edit/<%= p.id %>" class="btn btn-outline small">Edit</a>
+              <button class="btn btn-delete small" data-id="<%= p.id %>">Delete</button>
+            </div>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

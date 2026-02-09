@@ -1,0 +1,71 @@
+[
+  {
+    "id": "101",
+    "title": "Seiko Prospex SPB143",
+    "price": 1250,
+    "description": "A modern reinterpretation of Seiko's classic dive watch with a robust 200m water resistance, automatic movement, and a sapphire crystal. Sporty yet refined for everyday wear.",
+    "primaryImage": "images/bdb93bff9b810610aa1502e21a5c4e2f",
+    "secondaryImages": [
+      "images/515728677a6e7155e49308e6d980ae1a",
+      "images/5e8c0edac614b2ff6d591175f019ae48",
+      "images/7a55b80176d8b0eef05685bae7957d9a"
+    ]
+  },
+  {
+    "id": "102",
+    "title": "Casio G-Shock GA-2100-1A",
+    "price": 9900,
+    "description": "Ultra-slim shock-resistant digital-analog G-Shock with carbon core guard structure, world time, and 200m water resistance — built for rugged daily use.",
+    "primaryImage": "images/acb06f257da196aa7e28ab14658cca74",
+    "secondaryImages": [
+      "images/casio_ga2100_primary.svg",
+      "images/casio_ga2100_2.svg",
+      "images/e07f275349e6e28830d29dc3a8b216c9",
+      "images/12694e669eeb08ee9ec0926b90542bac"
+    ]
+  },
+  {
+    "id": "103",
+    "title": "Tissot PRX Powermatic 80",
+    "price": 650,
+    "description": "A sleek 1970s-inspired integrated-bracelet watch with Powermatic 80 automatic movement (80-hour power reserve), refined dial finishing, and versatile style for dress or casual looks.",
+    "primaryImage": "images/f1cdda18856f1b71144c0e707f6569b2",
+    "secondaryImages": [
+      "images/1c10d7c3bfb49e4e8458677aab70692f",
+      "images/d2be484fd52e6fb5b530480f8665f753"
+    ]
+  },
+  {
+    "id": "105",
+    "title": "Citizen Eco-Drive Promaster Diver",
+    "price": 399,
+    "description": "Eco-Drive solar-powered diver with ISO-compliant construction, luminous markers, and a unidirectional bezel — reliable performance without battery changes.",
+    "primaryImage": "images/63815403fd63f2f3c1c6bbbb9cc1ef58",
+    "secondaryImages": [
+      "images/e33e904b118a8aa6527c6088616197d4",
+      "images/75dc693be3a2fb923d423a4301b6069d"
+    ]
+  },
+  {
+    "id": "1765883687978",
+    "title": "Rolex Submariner Date – Timeless Luxury in Every Second",
+    "price": 100000000,
+    "description": "An icon of precision and prestige, the Rolex Submariner Date is crafted for those who value excellence without compromise. Forged from Oystersteel and powered by Rolex’s in-house",
+    "primaryImage": "images/fa5c146c115cb1fd1dc05d7b9f4843c6",
+    "secondaryImages": [
+      "images/93e5076a7d2392120bbbfefcd7a55746",
+      "images/fa607d9f6e0528f7bbdb7253e368383c"
+    ]
+  },
+  {
+    "id": "1765884071864",
+    "title": "Rado Centrix – Modern Elegance Crafted in Time",
+    "price": 99999999,
+    "description": "The Rado Centrix embodies contemporary luxury with its sleek design and innovative materials. Renowned for its high-tech ceramic construction, this watch offers exceptional comfort, scratch resistance.",
+    "primaryImage": "images/6353afaddb238c7990fbd7340d3397e0",
+    "secondaryImages": [
+      "images/9567a704e1724f3e467bc10a1e2f9042",
+      "images/4ad9edb8940a9ab59ae035b80a4d7eb6"
+    ]
+  }
+]

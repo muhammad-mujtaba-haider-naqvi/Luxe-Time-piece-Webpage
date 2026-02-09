@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopping Cart | Luxe Timepieces</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header', { isAdmin: isAdmin }) %>
+  <main class="container">
+    <div class="page-header">
+      <h1>Your Cart</h1>
+    </div>
+    <% if (items.length === 0) { %>
+      <div class="empty-state">
+        <p>Your cart is currently empty.</p>
+        <a href="/" class="btn">Continue Shopping</a>
+      </div>
+    <% } else { %>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% items.forEach(function(it){ %>
+            <tr id="cart-<%= it.id %>">
+              <td><img src="/<%= it.primaryImage %>" alt="<%= it.title %>"></td>
+              <td><%= it.title %></td>
+              <td>$<%= it.price.toFixed(2) %></td>
+              <td><%= it.qty %></td>
+              <td>$<%= (it.price * it.qty).toFixed(2) %></td>
+              <td><button class="btn btn-cart-remove" data-id="<%= it.id %>">&times;</button></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <div class="gross">
+        <span class="gross-label">Gross Total</span>
+        <span class="gross-amount">$<%= grossTotal.toFixed(2) %></span>
+      </div>
+    <% } %>
+  </main>
+  <%- include('partials/footer') %>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

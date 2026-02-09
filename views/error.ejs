@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Error | Luxe Timepieces</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header', { isAdmin: false }) %>
+  <main class="container">
+    <div class="error-page">
+      <h1>Something Went Wrong</h1>
+      <p><%= message %></p>
+      <a href="/" class="btn">Return to Home</a>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

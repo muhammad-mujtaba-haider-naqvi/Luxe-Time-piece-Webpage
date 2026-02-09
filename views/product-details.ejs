@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= product.title %> | Luxe Timepieces</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <%- include('partials/header', { isAdmin: isAdmin }) %>
+  <main class="container product-detail">
+    <div class="detail-grid">
+      <div class="images">
+        <img class="primary" src="/<%= product.primaryImage %>" alt="<%= product.title %>">
+        <div class="secondary">
+          <img src="/<%= product.primaryImage %>" alt="<%= product.title %>" class="active">
+          <% (product.secondaryImages || []).forEach(function(img){ %>
+            <img src="/<%= img %>" alt="<%= product.title %> detail">
+          <% }) %>
+        </div>
+      </div>
+      <div class="info">
+        <h1><%= product.title %></h1>
+        <p class="price">$<%= product.price.toFixed(2) %></p>
+        <p class="desc"><%= product.description %></p>
+        <form action="/cart/add" method="post">
+          <input type="hidden" name="productId" value="<%= product.id %>">
+          <label>Quantity</label>
+          <input type="number" name="quantity" value="1" min="1">
+          <button class="btn" type="submit">Add to Cart</button>
+        </form>
+        <% if (isAdmin) { %>
+          <a class="btn btn-outline" href="/admin/edit/<%= product.id %>">Edit Product</a>
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+  <script src="/js/gallery.js"></script>
+</body>
+</html>
