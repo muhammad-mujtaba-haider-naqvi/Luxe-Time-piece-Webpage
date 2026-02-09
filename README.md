@@ -1,4 +1,5 @@
-# E-commerce Assignment (Node.js + Express + EJS)
+# E-commerce Luxe Time Piece Webpage 
+# (Node.js + Express + EJS)
 
 A simple, full-featured web shop built for a Web Development lab. It uses Express for routing, EJS for server-side views, sessions for cart and admin auth, and a lightweight JSON file (`products.json`) for data persistence. Product images are stored in `public/images`, with upload and management via Multer.
 
